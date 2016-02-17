@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo SideoMatic a jQuery plugin by Eduardo Pecino Soriano</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/sideomatic.min.css">
+</head>
+
+<body class="cyan lighten-5">
+
+
+    <div class="side-menu">
+        <h5 class="title">SideoMatic</h5>
+        <ul>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#markup">The Markup</a></li>
+            <li><a href="#cssjs">CSS and Js</a></li>
+            <li><a href="#customize">Customize</a></li>
+            <li><a href="#demo">Demo</a></li>
+
+        </ul>
+    </div>
+
+    <div class="content">
+        <i class="fa fa-bars fa-2x menu menu-bar"></i>
+        <i class="fa fa-chevron-circle-left fa-2x menu menu-left"></i>
+        <br/>
+        <nav class="cyan darken-2">
+
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center" id="/">SideoMatic</a>
+
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col s12 center">
+
+
+                <h2 class="orange accent-2 white-text">How to use SideoMatic Plugin</h2>
+                <div class="card-panel">
+                    <p>SideoMatic it's a jQuery plugin to add a beautiful and customizable side menu to your projects.</p>
+                </div>
+                <h3> Follow these steps:</h3>
+            </div>
+        </div>
+        <div class="divider" id="markup"></div>
+        <div class="section row card-panel hoverable">
+            <div class="col s6">
+                <h4 class="center">The Markup</h4>
+                <ul>
+                    <h5>Menu and links</h5>
+                    <li> Put an unordered list with your links in a <span class="grey lighten-3 cyan-text text-darken-2">"side-menu"</span> class.</li>
+                    <h5>Content</h5>
+                    <li> Put your content in a div with the <span class="grey lighten-3 cyan-text text-darken-2">"content"</span> class.</li>
+                    <h5>One or two menu buttons</h5>
+                    <li> One or two images, icons, logos what you want, with the <span class="grey lighten-3 cyan-text text-darken-2">"menu"</span> class.</li>
+                    <li>- If you choose only one image add the <span class="grey lighten-3 cyan-text text-darken-2">"menu-bar"</span>class. (<span class="red-text">*</span>See <a href="#customize">Customize section</a>)</li>
+                    <li>- If you choose two images, add the <span class="grey lighten-3 cyan-text text-darken-2">"menu-bar"</span>class for the first image and <span class="grey lighten-3 cyan-text text-darken-2">"menu-left" </span>for the second.</li>
+                </ul>
+
+
+            </div>
+            <div class="col s6">
+                <pre class="grey lighten-3 cyan-text text-darken-2">
+      
+        &lt;div class="side-menu"&gt;
+       &lt;h2 class="title">YourTitleMenu&lt;/h2&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=""&gt;YourLink01&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=""&gt;YourLink02&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=""&gt;YourLink03&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="content"&gt;
+	&lt;img class="menu menu-bar">&lt;/img&gt;
+	&lt;img class="menu menu-left">&lt;/img&gt;
+	
+        //*************ADD YOUR CONTENT HERE*************//
+	
+	&lt;/div&gt; 
+	
+</pre>
+            </div>
+
+        </div>
+        <div class="divider" id="cssjs"></div>
+        <div class="section row card-panel hoverable">
+            <div class="col s6">
+                <pre class="grey lighten-3 cyan-text text-darken-2">
+     
+       //CSS
+        &lt;script src="css/sideomatic.css"&gt;
+        &lt;script src="css/sideomatic.min.css"&gt;
+
+       
+        //jQuery
+        &lt;script src="js/jquery.min.js"&gt; &lt;/script&gt;
+
+
+        //SideoMatic js
+        &lt;script src="js/sideomatic.js"&gt; &lt;/script&gt;
+        &lt;script src="js/sideomatic.min.js"&gt; &lt;/script&gt;
+
+        //SideoMatic simple call
+        $(".side-menu").sideomatic();
+
+
+</pre>
+            </div>
+            <div class="col s6">
+                <h4 class="center">CSS and JS</h4>
+                <ul class="center">
+                    <li>
+                        <h5>Styles</h5>
+                        <ul>
+                            <li>Link the <span class="grey lighten-3 cyan-text text-darken-2">sideomatic.css </span>or the <span class="grey lighten-3 cyan-text text-darken-2">sideomatic.min.css</span> </li>
+                        </ul>
+                    </li>
+
+                    <br/>
+                    <li>
+                        <h5>Mandatory jQuery</h5>
+                        <ul>
+                            <li>Link the jQuery library</li>
+                        </ul>
+                    </li>
+                    <br/>
+                    <li>
+                        <h5>Don't forget the Js</h5>
+                        <ul>
+                            <li>Link the <span class="grey lighten-3 cyan-text text-darken-2">sideomatic.js </span>or the <span class="grey lighten-3 cyan-text text-darken-2">sideomatic.min.js</span> </li>
+                        </ul>
+                    </li>
+                    <br/>
+                    <li>
+                        <h5>Finally call the Plugin</h5>
+                        <ul>
+                            <li>At the end of the body.</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="divider"></div>
+        <div class="section row card-panel hoverable">
+            <div class="col s6">
+                <h4 class="center" id="customize">Customize your Menu</h4>
+                <ul>
+                    <h5>Customize the colors</h5>
+                    <li> By default your menu has black colors, but maybe you want another cool combination.</li>
+                    <li> There is no problem, you can customize all the colors of the menu</li>
+                    <br/>
+                    <h5>Change the call of the Plugin</h5>
+                    <li>Simply set the colors in the call of the plugin in this way</li>
+                    <br/>
+                    <h5>One button menu</h5>
+                    <li>By default the plugin works with two buttons, if you want only one, add in the call the value <span class="grey lighten-3 cyan-text text-darken-2">"onlyOne"</span> and set to <span class="grey lighten-3 cyan-text text-darken-2">"true"</span>.</li>
+
+                </ul>
+
+
+            </div>
+            <div class="col s6">
+                <pre class="grey lighten-3 cyan-text text-darken-2">
+      
+        //Set your colors
+       $(".side-menu").sideomatic({
+   		menuColor : 'yellow',
+		menuText: '#fff',
+		titleColor:'red',
+		titleText: 'blue',
+		linkBorderColor: '#2a2a2a',
+		linkText: 'black',
+		buttonColor: 'transparent',
+		buttonText:'orange',
+		linkOver: 'tomato'
+        });
+        
+        //Set one image button
+        $(".side-menu").sideomatic({
+   	    onlyOne: false
+        });
+   
+	
+</pre>
+            </div>
+
+        </div>
+        <div id="demo">
+
+            <div class="row">
+                <div class="col s12 ">
+                    <div class="card orange accent-2">
+                        <div class="card-content white-text center">
+                            <h3>DEMO</h3>
+                            <p> Em ... you don't see that beautiful button at the top?</p>
+                            <p> C'mon! Serve yourself, click on it. <i class="fa fa-smile-o fa-2x"></i>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <footer class="page-footer cyan darken-2">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2016 Eduardo Pecino Soriano MIT LICENSE
+                    <a class="grey-text text-lighten-4 right" href="https://github.com/edups/SideoMatic"><i class="fa fa-github"></i>
+See it on GitHub</a>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script type="text/javascript" src="js/sideomatic.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".side-menu").sideomatic({
+                menuColor: '#0097a7',
+                menuText: '#fff',
+                titleColor: '#00838f',
+                titleText: '#fff',
+                linkBorderColor: '#e0e0e0',
+                linkText: '#fff',
+                buttonColor: '#ffab40',
+                buttonText: '#fff',
+                linkOver: 'orange'
+            });
+        });
+    </script>
+</body>
+
+</html>
